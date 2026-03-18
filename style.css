@@ -1,0 +1,73 @@
+/*=HOME PAGE STYLES=*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+/*Heading style*/
+h1 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4CAF50;  
+}
+p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Numbering */
+ul {
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 5px;
+}
+li {
+    background-color: white;  
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;  
+    color: #555;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+li::before {
+    content: '✓';
+    color: #4CAF50; 
+    font-weight: bold;
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+/* Hover effect on list items - match input focus */
+li:hover {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76,175,80,0.3);
+    transform: translateX(5px);
+}
+
+
+/*Navigation bar styling*/
+nav{ 
+    background-color: #333;
+    padding: 15px 25px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px #4CAF50;
+    }
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;        
+    margin-right: 10px;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+

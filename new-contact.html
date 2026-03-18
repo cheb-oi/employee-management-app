@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New Contract</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
 </head>
 <body>
     <nav>
         <a href="index.html">Home</a>
-        <a href="new_contract.html">New Contract</a>
-        <a href="view_contracts.html">View all Contracts</a>
+        <a href="new-contact.html">New Contract</a>
+        <a href="view-contacts.html">View all Contracts</a>
     </nav>
 
     <main>
@@ -28,14 +29,11 @@
                 <label for="LastName">Last name:</label>
                 <input type="text" id="LastName" name="LastName" placeholder="Enter Your Last Name">
             </div>
-            <div>
-                <label>Gender:</label>
-                <div>
+            <div class="gender-section">
                     <input type="radio" id="male" name="gender" value="male">
                     <label for="male">Male</label>
                     <input type="radio" id="female" name="gender" value="female">
                     <label for="female">Female</label>
-                </div>
             </div>
             <div>
                 <label for="Phone">Phone:</label>
@@ -48,10 +46,10 @@
             <div>
                 <label for="position">Position:</label>
                 <select id="position" name="position">
-                    <option value="">Select Your Position(Optional)</option>
-                    <option value="Branch Manager"> Branch Manager</option>
-                    <option value="Web Designer"> Web Designer</option>
-                    <option value="System Developer"> System Developer</option>
+                    <option value="">Select Position</option>
+                    <option value="Branch Manager">Branch Manager</option>
+                    <option value="Web Designer">Web Designer</option>
+                    <option value="System Developer">System Developer</option>
                     <option value="Human Resource">Human Resource</option>
                     <option value="Account Manager">Account Manager</option>
                 </select>
