@@ -8,15 +8,22 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="new-contact.html">New Contract</a>
-        <a href="view-contacts.html">View all Contracts</a>
+   <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="new-contact.html">New Employee</a>
+            <a href="view-contacts.html">View all Contracts</a>
+        </div>
+         <div class="profile">
+            <img src="Images/Profile Picture Placeholder.jpeg" alt="Profile" class="profile-img">
+            <span class="profile-name">Cheboi Mark</span>
+            <span class="profile-position">(Admin)</span>
+        </div>
     </nav>
 
     <main>
         <h1>Add New Contact</h1>
-        <form>
+        <form onsubmit="handleFormSubmit(event)">
             <div>
                 <label for="IDNumber">ID Number:</label>
                 <input type="text" id="IDNumber" name="IDNumber" placeholder="Enter Identification Number">
@@ -30,6 +37,7 @@
                 <input type="text" id="LastName" name="LastName" placeholder="Enter Your Last Name">
             </div>
             <div class="gender-section">
+                    <label>Gender:</label><br>
                     <input type="radio" id="male" name="gender" value="male">
                     <label for="male">Male</label>
                     <input type="radio" id="female" name="gender" value="female">
@@ -43,7 +51,6 @@
                 <label for="Email">Email:</label>
                 <input type="email" id="Email" name="Email" placeholder="Enter Your Email">
             </div>
-            <div>
                 <label for="position">Position:</label>
                 <select id="position" name="position">
                     <option value="">Select Position</option>

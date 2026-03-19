@@ -4,15 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Contacts</title>
+     <link rel="stylesheet" href="style.css">
+     <script src="main.js"></script>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="new-contact.html">New Contact</a> |
-        <a href="view-contacts.html">View All Contacts</a>
+   <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="new-contact.html">New Employee</a>
+            <a href="view-contacts.html">View all Contracts</a>
+        </div>
+         <div class="profile">
+            <img src="Images/Profile Picture Placeholder.jpeg" alt="Profile" class="profile-img">
+            <span class="profile-name">Cheboi Mark</span>
+            <span class="profile-position">(Admin)</span>
+        </div>
     </nav>
 
-    <main>
+        <main>
+            <h1>All Contacts</h1>
+            <table class="contacts-table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Name</th>
+                        <th>ID</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Modifiction Buttons</th>
+                    </tr>
+                </thead>
+            <tbody>
+
+        <tr>
+            <td>1</td>
+            <td>Dr.Alice Muthoni(HR)</td>
+            <td>ID004</td>
+            <td>+254 712345678</td>
+            <td>alice.muthoni@company.com</td>
+            <td class="tools">
+                <button class="btn-details" onclick="viewDetails('Dr. Alice Muthoni')">Details</button>
+                <button class="btn-edit" onclick="editContact('Dr. Alice Muthoni')">Edit</button>
+                <button class="btn-delete" onclick="confirmDelete('Dr. Alice Muthoni')">Delete</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Eng. Peter Kariuki(IT)</td>
+            <td>ID008</td>
+            <td>+254 723456789</td>
+            <td>peter.kariuki@company.com</td>
+            <td class="tools">
+                <button class="btn-details" onclick="viewDetails('Dr. Alice Muthoni')">Details</button>
+                <button class="btn-edit" onclick="editContact('Dr. Alice Muthoni')">Edit</button>
+                <button class="btn-delete" onclick="confirmDelete('Dr. Alice Muthoni')">Delete</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Prof. Susan Wairimu(Sales)</td>
+            <td>ID012</td>
+            <td>+254 734567890</td>
+            <td>susan.wairimu@company.com</td>
+            <td class="tools">
+                <button class="btn-details" onclick="viewDetails('Prof. Susan Wairimu')">Details</button>
+                <button class="btn-edit" onclick="editContact('Prof. Susan Wairimu')">Edit</button>
+                <button class="btn-delete" onclick="confirmDelete('Prof. Susan Wairimu')">Delete</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>CPA John Njoroge (Finance)</td>
+            <td>ID016</td>
+            <td>+254 745678901</td>
+            <td>john.njoroge@company.com</td>
+            <td class="tools">
+                <button class="btn-details" onclick="viewDetails('CPA John Njoroge')">Details</button>
+                <button class="btn-edit" onclick="editContact('CPA John Njoroge')">Edit</button>
+                <button class="btn-delete" onclick="confirmDelete('CPA John Njoroge')">Delete</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Rev. Joseph Maina(Admin)</td>
+            <td>ID020</td>
+            <td>+254 756789012</td>
+            <td>joseph.maina@company.com</td>
+            <td class="tools">
+                <button class="btn-details" onclick="viewDetails('Rev. Joseph Maina')">Details</button>
+                <button class="btn-edit" onclick="editContact('Rev. Joseph Maina')">Edit</button>
+                <button class="btn-delete" onclick="confirmDelete('Rev. Joseph Maina')">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+       </table>
     </main>
-</body>
+    </body>
 </html>
