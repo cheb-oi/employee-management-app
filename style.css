@@ -4,7 +4,12 @@ body {
     margin: 20px;
     padding: 20px;
     background-color: #f0f0f0;
+    background-image: url(Images/Background\ Image.jpeg); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
+
 /*Heading style*/
 h1 {
     color: #333;
@@ -22,16 +27,16 @@ p {
 
 /* Numbering */
 ul {
-    background-color: white;
     padding: 20px 40px;
     border-radius: 5px;
+    width: 50%;
 }
 li {
-    background-color: white;  
+    background-color: #f0f0f0;  
     padding: 15px 20px;
     margin-bottom: 10px;
     border-radius: 5px;
-    border: 1px solid #ddd;  
+    border: 1px solid#4CAF50;;  
     color: #555;
     display: flex;
     align-items: center;
@@ -44,14 +49,11 @@ li::before {
     margin-right: 15px;
     font-size: 18px;
 }
-
-/* Hover effect on list items - match input focus */
 li:hover {
     border-color: #4CAF50;
     box-shadow: 0 0 5px rgba(76,175,80,0.3);
     transform: translateX(5px);
 }
-
 
 /*Navigation bar styling*/
 nav{ 
@@ -60,6 +62,9 @@ nav{
     border-radius: 5px;
     margin-bottom: 30px;
     box-shadow: 0 4px 10px #4CAF50;
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
     }
 nav a {
     color: white;
@@ -70,4 +75,100 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
+/*Profile style*/
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #4CAF50;
+}
+.profile-name {
+    font-weight: bold;
+}
+.profile-position {
+    color: #4CAF50;
+    font-size: 14px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 3px;
+}
 
+/*=NEWCONTACT PAGE STYLES=*/
+/*Style for the form container*/
+form {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+form div {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/*Gender radio buttons*/
+input[type="radio"] {
+    margin-right: 5px;
+    margin-left: 15px;
+}
+
+input[type="radio"]:first-of-type {
+    margin-left: 0;
+}
+.gender-section {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.gender-section label {
+    display: inline;
+    font-weight: normal;
+    margin-right: 20px;
+}
+
+/*Submit button style */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
