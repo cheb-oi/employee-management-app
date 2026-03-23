@@ -9,6 +9,14 @@ body {
     background-position: center;
     background-attachment: fixed;
 }
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
 
 /*Heading style*/
 h1 {
@@ -171,4 +179,39 @@ button[type="submit"] {
 }
 button[type="submit"]:hover {
     background-color: #45a049;
+}
+
+/*=VIEWCONTRACTS PAGE STYLES=*/
+/*Style for the table container*/
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+.contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.contacts-table thead tr {
+    background-color: #333;
+    color: white;
+}
+.contacts-table th {
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+}
+.contacts-table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+.contacts-table tbody tr:hover {
+    background-color: #f0f0f0;
+}
+.contacts-table td {
+    padding: 10px 12px;
+    color: #555;
 }
