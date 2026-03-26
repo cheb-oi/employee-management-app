@@ -23,7 +23,7 @@
         <main>
             <h1>All Contacts</h1>
             <div class="table-container">
-            <table class="contacts-table">
+            <table class="contacts-table" id="employeeTable">
                 <thead>
                     <tr>
                         <th>No</th>
@@ -31,78 +31,15 @@
                         <th>ID</th>
                         <th>Phone</th>
                         <th>Email</th>
-                        <th>Modifiction Buttons</th>
+                        <th>Position</th>
+                        <th>Modification Buttons</th>
                     </tr>
                 </thead>
-            <tbody>
-
-        <tr>
-            <td>1</td>
-            <td>Dr.Alice Muthoni(HR)</td>
-            <td>ID004</td>
-            <td>+254 712345678</td>
-            <td>alice.muthoni@company.com</td>
-            <td class="tools">
-                <button class="btn-details" onclick="viewDetails('Dr. Alice Muthoni')">Details</button>
-                <button class="btn-edit" onclick="editContact('Dr. Alice Muthoni')">Edit</button>
-                <button class="btn-delete" onclick="confirmDelete('Dr. Alice Muthoni')">Delete</button>
-            </td>
-        </tr>
-
-        <tr>
-            <td>2</td>
-            <td>Eng.Peter Kariuki(IT)</td>
-            <td>ID008</td>
-            <td>+254 723456789</td>
-            <td>peter.kariuki@company.com</td>
-            <td class="tools">
-                <button class="btn-details" onclick="viewDetails('Eng. Peter Kariuki')">Details</button>
-                <button class="btn-edit" onclick="editContact('Eng. Peter Kariuki')">Edit</button>
-                <button class="btn-delete" onclick="confirmDelete('Eng. Peter Kariuki')">Delete</button>
-            </td>
-        </tr>
-
-        <tr>
-            <td>3</td>
-            <td>Prof. Susan Wairimu(Sales)</td>
-            <td>ID012</td>
-            <td>+254 734567890</td>
-            <td>susan.wairimu@company.com</td>
-            <td class="tools">
-                <button class="btn-details" onclick="viewDetails('Prof. Susan Wairimu')">Details</button>
-                <button class="btn-edit" onclick="editContact('Prof. Susan Wairimu')">Edit</button>
-                <button class="btn-delete" onclick="confirmDelete('Prof. Susan Wairimu')">Delete</button>
-            </td>
-        </tr>
-
-        <tr>
-            <td>4</td>
-            <td>CPA John Njoroge (Finance)</td>
-            <td>ID016</td>
-            <td>+254 745678901</td>
-            <td>john.njoroge@company.com</td>
-            <td class="tools">
-                <button class="btn-details" onclick="viewDetails('CPA John Njoroge')">Details</button>
-                <button class="btn-edit" onclick="editContact('CPA John Njoroge')">Edit</button>
-                <button class="btn-delete" onclick="confirmDelete('CPA John Njoroge')">Delete</button>
-            </td>
-        </tr>
-
-        <tr>
-            <td>5</td>
-            <td>Rev. Joseph Maina(Admin)</td>
-            <td>ID020</td>
-            <td>+254 756789012</td>
-            <td>joseph.maina@company.com</td>
-            <td class="tools">
-                <button class="btn-details" onclick="viewDetails('Rev. Joseph Maina')">Details</button>
-                <button class="btn-edit" onclick="editContact('Rev. Joseph Maina')">Edit</button>
-                <button class="btn-delete" onclick="confirmDelete('Rev. Joseph Maina')">Delete</button>
-            </td>
-        </tr>
-    </tbody>
-    </table>
-    </div>
+                <tbody>
+                </tbody>
+           
+            </table>
+        </div>
     </main>
     <script src="main.js"></script>
 </body>
