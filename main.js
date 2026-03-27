@@ -50,7 +50,7 @@ if (localStorage.getItem('employees')) {
         },
         {
             id: 5,
-            fullName: "Rev. Joseph Maina",
+            fullName: "Eng. Joseph Maina",
             idNumber: "ID020",
             phone: "+254 756789012",
             email: "joseph.maina@company.com",
@@ -76,10 +76,19 @@ function viewDetails(button, name) {
 function editContact(button, name) {
     let row = button.closest('tr');
     let cells = row.getElementsByTagName('td');
-    let id = cells[2].innerText;
-    let phone = cells[3].innerText;
-    let email = cells[4].innerText;
-    alert(`Edit contact for ${name}\n\nCurrent Info:\nID: ${id}\nPhone: ${phone}\nEmail: ${email}\n\n(Edit form would open here)`);
+    let newPhone = prompt(`Edit phone for ${name}:`, cells[3].innerText);
+    let newEmail = prompt(`Edit email for ${name}:`, cells[4].innerText);
+    if (newPhone && newEmail) {
+        cells[3].innerText = newPhone;
+        cells[4].innerText = newEmail;
+        let employee = employees.find(emp => emp.fullName === name);
+        if (employee) {
+            employee.phone = newPhone;
+            employee.email = newEmail;
+            localStorage.setItem('employees', JSON.stringify(employees));
+        }
+        alert(`${name} has been updated!`);
+    }
 }
 
 // Delete button
@@ -128,7 +137,7 @@ function handleFormSubmit(event) {
 //popup message
     employees.push(newEmployee);
     localStorage.setItem('employees', JSON.stringify(employees));
-    alert(`New employee added successfully`);
+    alert(`${firstName} ${lastName} has been added successfully`);
     document.querySelector('form').reset();
 }
 
