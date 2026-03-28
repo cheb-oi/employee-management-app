@@ -76,15 +76,30 @@ function viewDetails(button, name) {
 function editContact(button, name) {
     let row = button.closest('tr');
     let cells = row.getElementsByTagName('td');
+    let newID = prompt(`Edit ID for ${name}:`, cells[2].innerText);
     let newPhone = prompt(`Edit phone for ${name}:`, cells[3].innerText);
     let newEmail = prompt(`Edit email for ${name}:`, cells[4].innerText);
-    if (newPhone && newEmail) {
+    let positionOptions = "Choose position:\n1. Branch Manager\n2. Web Designer\n3. System Developer\n4. Human Resource\n5. Account Manager";
+    let positionChoice = prompt(positionOptions + "\n\nEnter number (1-5):", "1");
+    let positions = {
+        "1": "Branch Manager",
+        "2": "Web Designer", 
+        "3": "System Developer",
+        "4": "Human Resource",
+        "5": "Account Manager"
+    };
+    let newPosition = positions[positionChoice] || cells[5].innerText;
+    if (newID && newPhone && newEmail && newPosition) {
+        cells[2].innerText = newID;
         cells[3].innerText = newPhone;
         cells[4].innerText = newEmail;
+        cells[5].innerText = newPosition;
         let employee = employees.find(emp => emp.fullName === name);
         if (employee) {
+            employee.idNumber = newID;
             employee.phone = newPhone;
             employee.email = newEmail;
+            employee.position = newPosition;
             localStorage.setItem('employees', JSON.stringify(employees));
         }
         alert(`${name} has been updated!`);
@@ -94,13 +109,14 @@ function editContact(button, name) {
 // Delete button
 function confirmDelete(button, name) {
     if (confirm(`Are you sure you want to delete ${name}?`)) {
+        let employees = JSON.parse(localStorage.getItem('employees')) || [];
+        let updatedEmployees = employees.filter(emp => emp.fullName !== name);
+        localStorage.setItem('employees', JSON.stringify(updatedEmployees));
         let row = button.closest('tr');
         if (row) {
             row.remove();
-            alert(`${name} has been deleted.`);
-        } else {
-            alert(`${name} has been deleted.`);
         }
+        alert(`${name} has been deleted.`);
     }
 }
      
